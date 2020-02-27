@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Vue Components</title>
+</head>
+
+<body>
+  <div id="app">
+    <contar></contar>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+  <script>
+
+    Vue.component('contar', {
+      template: `<div>
+      <button type="button" @click="contador++"> contar </button> 
+      
+      {{contador}}
+      </div>`,
+      data() {
+        return {
+          contador: 0
+        }
+      }
+    });
+
+    new Vue({
+      el: '#app',
+      data: {
+
+      },
+      computed: {
+
+      },
+      methods: {
+
+      },
+      filters: {
+
+      }
+    })
+  </script>
+</body>
+
+</html>
